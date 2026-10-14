@@ -2,6 +2,12 @@
 
 Newest first. Every change to this repository gets an entry here, in the same commit.
 
+## 2026-10-14T00:25:00-05:00 — desktop — Diablo II since 2000
+
+- Changed: `README.md`, `CHANGELOG.md`
+- Why: the classic-game tenure starts in 2000, not 2006: machine block, Background and stack lines corrected.
+- Notes: none
+
 ## 2026-10-14T00:10:00-05:00 — desktop — plain-text profile
 
 - Changed: `README.md`, `CHANGELOG.md`; deleted `assets/header.svg`

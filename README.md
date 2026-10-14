@@ -4,7 +4,7 @@ larry@d2r
   os        Windows 11 Pro · Debian 12 on the origins
   host      RTX 5080 · 128 GB · three boxes on three continents
   shell     pwsh, bash, and a disassembler
-  uptime    Diablo II since 2006 · Resurrected since launch
+  uptime    Diablo II since 2000 · Resurrected since launch
   lang      Delphi · C# · Python · TypeScript · x64 asm when it lies
   editor    whatever has the hex view open
   target    D2R 3.3.93847
@@ -23,7 +23,7 @@ $ cat ~/.plan
 
 ## Background
 
-Twenty years in the original Diablo II, five in Resurrected, since its first day. I have watched the game's
+Diablo II since the summer of 2000, Resurrected since its first day: twenty-six years in one game. I have watched the game's
 internals change across every patch of the classic client and every build of the new one, and most of the
 tools I use I wrote because the ones that existed were wrong about something.
 
@@ -69,7 +69,7 @@ web                   TypeScript · Next.js · React · PostgreSQL · Caddy
 devops                release pipelines · gated deploys · fleet configuration · git-bundle shipping · Debian
 secops                perimeter and host hardening · Cloudflare rulesets and bot management · fail2ban
                       log pipelines and abuse reporting · incident response and post-mortems
-game                  Diablo II since 2006 · Diablo II: Resurrected since launch
+game                  Diablo II since 2000 · Diablo II: Resurrected since launch
 ```
 
 ## Infrastructure
