@@ -1,27 +1,25 @@
-<p align="center">
-  <img src="assets/header.svg" alt="Larry · Diablo II: Resurrected, taken apart and put to work" width="100%">
-</p>
+```
+larry@d2r
+─────────────────────────────────────────────────────────────────
+  os        Windows 11 Pro · Debian 12 on the origins
+  host      RTX 5080 · 128 GB · three boxes on three continents
+  shell     pwsh, bash, and a disassembler
+  uptime    Diablo II since 2006 · Resurrected since launch
+  lang      Delphi · C# · Python · TypeScript · x64 asm when it lies
+  editor    whatever has the hex view open
+  target    D2R 3.3.93847
+  policy    read-only · no telemetry · no DMs for bugs
+─────────────────────────────────────────────────────────────────
+```
 
-<p align="center">
-  <a href="https://d2r.org"><img src="https://img.shields.io/badge/Website-d2r.org-C8A45C?style=for-the-badge&labelColor=1C1715" alt="d2r.org"></a>
-  <a href="https://discord.com/invite/d2rmythos"><img src="https://img.shields.io/badge/Discord-D2R%20Mythos-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="D2R Mythos on Discord"></a>
-  <a href="https://github.com/d2r-mythos/MythosLoader/releases/latest"><img src="https://img.shields.io/github/v/release/d2r-mythos/MythosLoader?style=for-the-badge&label=MythosLoader&color=C8A45C&labelColor=1C1715" alt="MythosLoader latest release"></a>
-  <a href="https://github.com/d2r-mythos/MythosMaphack/releases/latest"><img src="https://img.shields.io/github/v/release/d2r-mythos/MythosMaphack?style=for-the-badge&label=MythosMaphack&color=C8A45C&labelColor=1C1715" alt="MythosMaphack latest release"></a>
-</p>
+```
+$ cat ~/.plan
 
-I pull Diablo II: Resurrected apart, work out how it really behaves, and build the tools it should have
-shipped with. Game binaries, the level generator, the data tables, the wire, and the infrastructure that
-serves the results to players. Everything here is written to be read: a value on a page traces back to the
-table it came from, a tool says exactly what it touches, and a deploy ships the tree that was tested and
-nothing else.
-
-## What I build
-
-| | | |
-|---|---|---|
-| [**MythosLoader**](https://github.com/d2r-mythos/MythosLoader) | C# / .NET · Win32 | Several game clients on one PC, each with its own account, window title, layout slot and crash recovery. Saved logins, one-click launch, no command windows. |
-| [**MythosMaphack**](https://github.com/d2r-mythos/MythosMaphack) | C# / .NET · native | The whole level the moment you enter it. Reads a handful of values from the game process, regenerates the map locally with the same algorithm the game uses, and confirms it against what the game actually loaded. Read access only. No injection, no input, no network. |
-| [**d2r.org**](https://d2r.org) | TypeScript · Next.js · PostgreSQL | The reference site: every item, skill, monster and area from the game's own tables, a build planner laid out as the game's screens, ladder history, and a forum. Served from three origins on three continents behind Cloudflare. |
+- resolve the new build's offsets before anyone asks
+- keep the level generator byte-for-byte with the game
+- the site answers from the nearest continent, or not at all
+- write it down: every change, one commit, one changelog line
+```
 
 ## Background
 
@@ -52,6 +50,14 @@ C# and .NET carry that work today; the Win32 underneath has not changed.
 - **The shipped tree is the tested tree.** A release is a git bundle of the commits the server lacks, a
   gate that runs the full test suite first and cannot be skipped, a build on the server, and a tree-hash
   check that stops the switch on any mismatch. One ship at a time, enforced by a lock.
+
+## What I don't do
+
+- Ship a binary I cannot explain line by line.
+- Touch a game process with anything but a read handle.
+- Trust a number I did not pull from the table myself.
+- Deploy from a tree the gate has not seen.
+- Answer "it works on my machine". There are three machines; it works on all of them or it is not done.
 
 ## Stack
 
@@ -87,8 +93,21 @@ game                  Diablo II since 2006 · Diablo II: Resurrected since launc
                                 └────────────┘
 ```
 
-## Elsewhere
+## Keys
 
-[d2r.org](https://d2r.org) · [forum](https://d2r.org/forum) · [Discord](https://discord.com/invite/d2rmythos)
+```
+ssh   ed25519   SHA256:XCz3y7/Kqy23Nr6yaSQVxFuAkEbyBEOa77cTTCVkIFI
+```
+
+Verify against [github.com/d2r-mythos.keys](https://github.com/d2r-mythos.keys). Anything claiming to be me
+and not signed by that key is not me.
+
+## Contact
+
+Bugs go in the open: the [forum](https://d2r.org/forum) or the repo's issues, with the game build and what you
+expected. Everything else, the [Discord](https://discord.com/invite/d2rmythos). Direct messages about bugs get
+pointed back here.
+
+[d2r.org](https://d2r.org) · [MythosLoader](https://github.com/d2r-mythos/MythosLoader) · [MythosMaphack](https://github.com/d2r-mythos/MythosMaphack)
 
 <sub>Diablo II: Resurrected is a trademark of Blizzard Entertainment. None of this is affiliated with or endorsed by Blizzard.</sub>

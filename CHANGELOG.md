@@ -2,6 +2,14 @@
 
 Newest first. Every change to this repository gets an entry here, in the same commit.
 
+## 2026-10-14T00:10:00-05:00 — desktop — plain-text profile
+
+- Changed: `README.md`, `CHANGELOG.md`; deleted `assets/header.svg`
+- Why: no image, no badges, no intro paragraph, no project table. The page opens with a machine block and a
+  `.plan`, then Background, the working rules, a "What I don't do" list, the stack, the infrastructure diagram,
+  the SSH key fingerprint (verifiable against github.com/d2r-mythos.keys) and a contact policy.
+- Notes: no GPG key exists for this account; add one here if it is ever created.
+
 ## 2026-10-13T23:50:00-05:00 — desktop — background section
 
 - Changed: `README.md`, `assets/header.svg`, `CHANGELOG.md`
