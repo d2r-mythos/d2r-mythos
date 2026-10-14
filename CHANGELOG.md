@@ -2,6 +2,12 @@
 
 Newest first. Every change to this repository gets an entry here, in the same commit.
 
+## 2026-10-14T00:35:00-05:00 — desktop — infrastructure diagram removed
+
+- Changed: `README.md`, `CHANGELOG.md`
+- Why: the Infrastructure section and its diagram are gone from the profile; the serving layout is not for the public page.
+- Notes: none
+
 ## 2026-10-14T00:25:00-05:00 — desktop — Diablo II since 2000
 
 - Changed: `README.md`, `CHANGELOG.md`

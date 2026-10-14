@@ -72,27 +72,6 @@ secops                perimeter and host hardening · Cloudflare rulesets and bo
 game                  Diablo II since 2000 · Diablo II: Resurrected since launch
 ```
 
-## Infrastructure
-
-```
-                          ┌─────────────────────────┐
-         players ───────▶ │   Cloudflare            │ ──▶  bot management · managed rulesets
-                          │   geo-steered routing   │      rate limits · edge cache · purge on ship
-                          └──────┬─────┬─────┬──────┘
-                                 │     │     │
-                     ┌───────────┘     │     └───────────┐
-                     ▼                 ▼                 ▼
-               ┌──────────┐     ┌────────────┐    ┌──────────────┐
-               │  Boston  │     │ Manchester │    │ Kuala Lumpur │     origins answer Cloudflare only
-               │  origin  │     │   origin   │    │    origin    │     key-only SSH · fail2ban · ufw
-               └────┬─────┘     └─────┬──────┘    └──────┬───────┘
-                    └─────────────────┴──────────────────┘
-                                      │
-                                ┌─────┴──────┐
-                                │ PostgreSQL │
-                                └────────────┘
-```
-
 ## Keys
 
 ```
