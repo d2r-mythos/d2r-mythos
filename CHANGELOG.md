@@ -2,6 +2,12 @@
 
 Newest first. Every change to this repository gets an entry here, in the same commit.
 
+## 2026-10-14T00:40:00-05:00 — desktop — one line out of "What I don't do"
+
+- Changed: `README.md`, `CHANGELOG.md`
+- Why: the read-handle line is removed from the list.
+- Notes: none
+
 ## 2026-10-14T00:35:00-05:00 — desktop — infrastructure diagram removed
 
 - Changed: `README.md`, `CHANGELOG.md`

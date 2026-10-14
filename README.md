@@ -54,7 +54,6 @@ C# and .NET carry that work today; the Win32 underneath has not changed.
 ## What I don't do
 
 - Ship a binary I cannot explain line by line.
-- Touch a game process with anything but a read handle.
 - Trust a number I did not pull from the table myself.
 - Deploy from a tree the gate has not seen.
 - Answer "it works on my machine". There are three machines; it works on all of them or it is not done.
