@@ -34,7 +34,7 @@
   <!-- title block -->
   <text x="64" y="112" class="mono" font-size="54" font-weight="700" fill="url(#gold)" letter-spacing="2">LARRY</text>
   <text x="64" y="150" class="mono txt" font-size="19">Diablo II: Resurrected, taken apart and put to work.</text>
-  <text x="64" y="178" class="mono dim" font-size="15">reverse engineering · systems · infrastructure · github.com/d2r-mythos</text>
+  <text x="64" y="178" class="mono dim" font-size="15">reverse engineering · devops · secops · Diablo II since 2006 · D2R since launch</text>
 
   <!-- terminal -->
   <g transform="translate(700,52)">

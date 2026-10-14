@@ -23,6 +23,22 @@ nothing else.
 | [**MythosMaphack**](https://github.com/d2r-mythos/MythosMaphack) | C# / .NET · native | The whole level the moment you enter it. Reads a handful of values from the game process, regenerates the map locally with the same algorithm the game uses, and confirms it against what the game actually loaded. Read access only. No injection, no input, no network. |
 | [**d2r.org**](https://d2r.org) | TypeScript · Next.js · PostgreSQL | The reference site: every item, skill, monster and area from the game's own tables, a build planner laid out as the game's screens, ladder history, and a forum. Served from three origins on three continents behind Cloudflare. |
 
+## Background
+
+Twenty years in the original Diablo II, five in Resurrected, since its first day. I have watched the game's
+internals change across every patch of the classic client and every build of the new one, and most of the
+tools I use I wrote because the ones that existed were wrong about something.
+
+Before this it was operations, for years and on fleets that mattered: build and release pipelines, fleet
+configuration, perimeter and host hardening, log pipelines, incident response at three in the morning and the
+post-mortems that followed. That is where the habits on this page come from. A deploy that cannot skip its
+gate, a server that answers only its edge, a tree hash checked before a switch: none of those are new ideas,
+they are scar tissue.
+
+The first language I shipped real tools in was Delphi. A large share of the classic Diablo II toolchain was
+Object Pascal, and I still reach for it when a Windows tool needs to be a single small binary with no runtime.
+C# and .NET carry that work today; the Win32 underneath has not changed.
+
 ## How the work is done
 
 - **The game is the source.** Numbers come from the shipped data tables and the binary, not from wikis.
@@ -42,9 +58,12 @@ nothing else.
 ```
 reverse engineering   x64 disassembly · process memory · structure recovery · CASC archives
                       level generation · game data tables · Battle.net and game-server protocols
-systems               C# / .NET · Win32 · Python · Node.js
+systems               Delphi / Object Pascal · C# / .NET · Win32 · Python · Node.js
 web                   TypeScript · Next.js · React · PostgreSQL · Caddy
-operations            Debian · Cloudflare (rulesets, geo steering, edge cache) · fail2ban · git-bundle deploys
+devops                release pipelines · gated deploys · fleet configuration · git-bundle shipping · Debian
+secops                perimeter and host hardening · Cloudflare rulesets and bot management · fail2ban
+                      log pipelines and abuse reporting · incident response and post-mortems
+game                  Diablo II since 2006 · Diablo II: Resurrected since launch
 ```
 
 ## Infrastructure
